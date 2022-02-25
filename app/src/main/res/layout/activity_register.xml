@@ -64,7 +64,7 @@
                 android:id="@+id/etName"
                 android:layout_width="297dp"
                 android:layout_height="53dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/buttons"
                 android:hint="name" />
@@ -78,7 +78,7 @@
                 android:id="@+id/etEmail"
                 android:layout_width="297dp"
                 android:layout_height="53dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/buttons"
                 android:hint="email" />
@@ -92,7 +92,7 @@
                 android:id="@+id/etPassword"
                 android:layout_width="297dp"
                 android:layout_height="53dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/buttons"
                 android:hint="password" />
@@ -106,7 +106,7 @@
                 android:id="@+id/etReytpe"
                 android:layout_width="297dp"
                 android:layout_height="53dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="60dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/buttons"
                 android:hint="Re-type password" />
@@ -120,7 +120,7 @@
                 android:id="@+id/etAge"
                 android:layout_width="297dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="60dp"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/buttons"
                 android:hint="Age" />
@@ -131,7 +131,7 @@
             android:id="@+id/btnregister"
             android:layout_width="297dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="60dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/buttons"
