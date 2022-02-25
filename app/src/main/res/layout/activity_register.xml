@@ -131,7 +131,7 @@
             android:id="@+id/btnregister"
             android:layout_width="297dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="59dp"
             android:layout_marginTop="40dp"
             android:layout_marginRight="30dp"
             android:background="@drawable/buttons"
