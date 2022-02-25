@@ -13,10 +13,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Education_App">
         <activity
-            android:name=".Register"
+            android:name=".AboutUs"
             android:exported="false" />
         <activity
-            android:name=".Main2Activity"
+            android:name=".InterviewTips"
+            android:exported="false" />
+        <activity
+            android:name=".Enterpreneurship"
+            android:exported="false" />
+        <activity
+            android:name=".VideoRef"
+            android:exported="false" />
+        <activity
+            android:name=".UploadCV"
+            android:exported="false" />
+        <activity
+            android:name=".JobActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Register"
             android:exported="false" />
         <activity
             android:name=".LoginScreen"

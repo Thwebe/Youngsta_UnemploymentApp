@@ -9,89 +9,43 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.backendless.Backendless;
-import com.backendless.BackendlessUser;
-import com.backendless.async.callback.AsyncCallback;
-import com.backendless.exceptions.BackendlessFault;
-
-public class Register extends AppCompatActivity {
+public class UploadCV extends AppCompatActivity {
     private View mProgressView;
     private View mLoginFormView;
     private TextView tvLoad;
-    Button btnregister;
-    EditText etName,etEmail,etPassword,etAge,etRetype;
 
-
+    TextView btnSelectFile;
+    Button btnUpload;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_upload_cv);
+
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
         tvLoad = findViewById(R.id.tvLoad);
 
-        etAge=findViewById(R.id.etAge);
-        etEmail=findViewById(R.id.etEmail);
-        etName=findViewById(R.id.etName);
-        etPassword=findViewById(R.id.etPassword);
-        btnregister=findViewById(R.id.btnregister);
-        etRetype=findViewById(R.id.etReytpe);
+        btnSelectFile=findViewById(R.id.btnSelectFile);
+        btnUpload=findViewById(R.id.btnUpload);
 
 
-        btnregister.setOnClickListener(new View.OnClickListener() {
+        btnSelectFile.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
 
-                if(etAge.getText().toString().isEmpty()||etEmail.toString().isEmpty()||etName.toString().isEmpty()||etPassword.toString().isEmpty())
-                {
-                    Toast.makeText(Register.this,"Please enter all fields",Toast.LENGTH_LONG).show();
-                }
-                else
-                {
-                    if(etPassword.getText().toString().trim().equals(etRetype.getText().toString().trim()))
-                    {
-                        BackendlessUser user = new BackendlessUser();
-                        user.setEmail(etEmail.getText().toString().trim());
-                        user.setPassword(etPassword.getText().toString().trim());
-                        user.setProperty("name",etName.getText().toString().trim());
-                        user.setProperty("cellNumber",etAge.getText().toString().trim());
-
-
-
-                        tvLoad.setText("Registering a user please wait...");
-                        showProgress(true);
-
-                        Backendless.UserService.register(user, new AsyncCallback<BackendlessUser>() {
-                            @Override
-                            public void handleResponse(BackendlessUser response) {
-
-                                Toast.makeText(Register.this, " User successfully registered ", Toast.LENGTH_SHORT).show();
-                                Register.this.finish();
-
-                            }
-
-                            @Override
-                            public void handleFault(BackendlessFault fault) {
-
-                                Toast.makeText(Register.this,"Error: " + fault.getMessage(),Toast.LENGTH_LONG).show();
-                                showProgress(false);
-                            }
-                        });
-
-                    }
-                    else
-                    {
-                        Toast.makeText(Register.this,"Please make sure the passwords match", Toast.LENGTH_LONG).show();
-                    }
-                }
             }
         });
 
+
+        btnUpload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
     /**
@@ -131,6 +85,7 @@ public class Register extends AppCompatActivity {
                     tvLoad.setVisibility(show ? View.VISIBLE : View.GONE);
                 }
             });
+
         } else {
             // The ViewPropertyAnimator APIs are not available, so simply show
             // and hide the relevant UI components.
@@ -139,5 +94,4 @@ public class Register extends AppCompatActivity {
             mLoginFormView.setVisibility(show ? View.GONE : View.VISIBLE);
         }
     }
-
 }
